@@ -1,7 +1,6 @@
 ---
 title: "Gas Prices Analysis"
 format: html
-editor: source
 ---
 
 ```{r}
