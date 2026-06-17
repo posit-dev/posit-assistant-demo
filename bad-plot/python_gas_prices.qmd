@@ -1,0 +1,31 @@
+---
+title: "Gas Prices Analysis"
+format: html
+jupyter: python3
+---
+
+```{python}
+#| label: setup
+#| echo: false
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+gas_data = pd.read_csv("weekly_gas_prices.csv", parse_dates=["date"])
+```
+
+## Weekly Gas Prices Analysis
+
+The dataset contains weekly gas prices over several years. Below is a plot summarizing the trends in gas prices.
+
+```{python}
+#| label: gas_prices_plot
+#| code-fold: true
+
+fig, ax = plt.subplots()
+ax.plot(gas_data["date"], gas_data["price"], color="blue")
+ax.set_title("Weekly Gas Prices Over Time")
+ax.set_xlabel("Week")
+ax.set_ylabel("Price")
+plt.show()
+```
